@@ -1,183 +1,213 @@
-import React from "react";
-import "antd/dist/antd.css";
-import Head from "next/head";
-import styled from "styled-components";
-import titleBar from "../../../assets/titlebar-bg.jpg";
-import { Flex, Text, Button } from "../../../components/Base/";
-import { AiOutlineHome } from "react-icons/ai";
-import antDCollapse from "antd/lib/collapse";
-import Link from "next/link";
+import React from 'react'
+import 'antd/dist/antd.css'
+import Head from 'next/head'
+import styled from 'styled-components'
+import titleBar from '../../../assets/titlebar-bg.jpg'
+import { Flex, Text, Button } from '../../../components/Base/'
+import { AiOutlineHome } from 'react-icons/ai'
+import antDCollapse from 'antd/lib/collapse'
+import Link from 'next/link'
 
 const text = `
-Generators don't actually create electricity. Instead, they convert mechanical or chemical energy into electrical energy. They do this by capturing the power of motion and turning it into electrical energy by forcing electrons from the external source through an electrical circuit.
-`;
-const { Panel: antDpanel } = antDCollapse;
+We specialize in providing top-tier petroleum products, catering to a diverse range of industries. With an unwavering commitment to quality, efficiency, and safety, we ensure a steady and dependable supply chain for our clients. Our extensive network, coupled with a dedication to sustainable practices, allows us to deliver premium-grade oil products while prioritizing environmental responsibility. Trust us as your partner for consistent, high-quality petroleum solutions tailored to meet your specific needs.
+`
+const text2 = `
+Step into the realm of our real estate construction division, where visions take shape and dreams find their foundation. We specialize in crafting exceptional properties, blending innovation with craftsmanship to create spaces that inspire. From concept to completion, our team is dedicated to delivering excellence in every detail. Whether it's residential, commercial, or industrial projects, our commitment to quality, timeliness, and customer satisfaction remains unwavering. With a keen focus on sustainable building practices and cutting-edge technology, we pave the way for a brighter, more efficient future in construction. Partner with us to turn your aspirations into tangible, remarkable realities.
+`
+const text3 = `
+We specialize in state-of-the-art food production, crafting a diverse array of delectable products that cater to varied tastes and preferences. Our commitment to quality is the cornerstone of every step - from sourcing the finest ingredients to employing advanced manufacturing processes. With a focus on food safety standards and innovation, we ensure that each creation leaving our facility embodies excellence. Sustainability is at the core of our operations, guiding us to minimize waste and maximize efficiency. Join us on this flavorful journey, where passion and precision converge to create exceptional culinary experiences
+`
+const { Panel: antDpanel } = antDCollapse
 const Collapse = styled(antDCollapse)`
-
-&.ant-collapse {
-  background: #fff !important;
-  
-}
-`;
+    &.ant-collapse {
+        background: #fff !important;
+    }
+`
 const Panel = styled(antDpanel)`
-  width: 70rem;
-  margin-top: 0.5rem;
-  @media (max-width: 1000px) {
-    width: 24rem;
-  }
-  @media (max-width: 763px) {
-    width: 20rem;
-  }
-  &.ant-collapse-item-active {
-    background: rgb(255, 199, 44);
-    font-size: 1rem;
-    color: #fff !important;
-    .ant-collapse-header {
-      fontsize: 25px;
-      color: #fff !important;
-      font-weight: bold;
+    width: 70rem;
+    margin-top: 0.5rem;
+    @media (max-width: 1000px) {
+        width: 24rem;
     }
-  }
-  &.ant-collapse-item {
-    font-size: 1rem;
-    .ant-collapse-header {
-      font-size: 1rem;
-      color: rgba(0, 48, 100, 1);
-      font-weight: bold;
+    @media (max-width: 763px) {
+        width: 20rem;
     }
-  }
-`;
+    &.ant-collapse-item-active {
+        background: rgb(255, 199, 44);
+        font-size: 1rem;
+        color: #fff !important;
+        .ant-collapse-header {
+            fontsize: 25px;
+            color: #fff !important;
+            font-weight: bold;
+        }
+    }
+    &.ant-collapse-item {
+        font-size: 1rem;
+        .ant-collapse-header {
+            font-size: 1rem;
+            color: rgba(0, 48, 100, 1);
+            font-weight: bold;
+        }
+    }
+`
 const StyledDiv = styled.div`
-  background-image: url(${titleBar.src});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 16rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-  text-align: center;
-`;
+    background-image: url(${titleBar.src});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 16rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+`
 export default function index() {
-  return (
-    <>
-      <Head>
-        <title>Generators</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta name="description" content="Generated by create next app" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <>
+            <Head>
+                <title>Other Products</title>
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
+                <meta
+                    name="description"
+                    content="Generated by create next app"
+                />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-      <StyledDiv>
-        <Flex direction="column">
-          <Text
-            width="100%"
-            mobileWidth="100%"
-            fontSize="2rem"
-            color="#fff"
-            textAlign="center"
-            mobileTextAlign="center"
-            fontWeight="bold"
-            mobileFontSize="2rem"
-          >
-            Other Products
-          </Text>
-          <Flex width="100%" justifyContent="center" gap="0px"  widthMobile="90%">
-          <Flex width="25%" directionMobile="row" widthMobile="90%" gap="5px">
-              <Link href="/">
-              <Flex
-                  width="50%"
-                  directionMobile="row"
-                  widthMobile="80%"
-                  justifyContent="center"
-                  gap="0px"
-                >
-                  <AiOutlineHome style={{ fontSize: "1.5rem" }} />
-                  <Text
-              color="#fff"
-              fontSize="1rem"
-              mobileFontSize="0.8rem"
-              textAlign="center"
-              fontWeight="bold"
-              cursor="pointer"
-              width="50%"
-              mobileWidth="60%"
-                  >
-                    Home
-                  </Text>
-                </Flex>
-              </Link>
-              /
-              <Link href="/products">
-              <Flex width="50%" directionMobile="row" widthMobile="60%">
-                  <Text
-                        fontSize="1rem"
-                        mobileFontSize="0.8rem"
+            <StyledDiv>
+                <Flex direction="column">
+                    <Text
+                        width="100%"
+                        mobileWidth="100%"
+                        fontSize="2rem"
                         color="#fff"
                         textAlign="center"
+                        mobileTextAlign="center"
                         fontWeight="bold"
-                        cursor="pointer"
-                  >
-                    Products
-                  </Text>{" "}
+                        mobileFontSize="2rem"
+                    >
+                        Other Products
+                    </Text>
+                    <Flex
+                        width="100%"
+                        justifyContent="center"
+                        gap="0px"
+                        widthMobile="90%"
+                    >
+                        <Flex
+                            width="25%"
+                            directionMobile="row"
+                            widthMobile="90%"
+                            gap="5px"
+                        >
+                            <Link href="/">
+                                <Flex
+                                    width="50%"
+                                    directionMobile="row"
+                                    widthMobile="80%"
+                                    justifyContent="center"
+                                    gap="0px"
+                                >
+                                    <AiOutlineHome
+                                        style={{ fontSize: '1.5rem' }}
+                                    />
+                                    <Text
+                                        color="#fff"
+                                        fontSize="1rem"
+                                        mobileFontSize="0.8rem"
+                                        textAlign="center"
+                                        fontWeight="bold"
+                                        cursor="pointer"
+                                        width="50%"
+                                        mobileWidth="60%"
+                                    >
+                                        Home
+                                    </Text>
+                                </Flex>
+                            </Link>
+                            /
+                            <Link href="/products">
+                                <Flex
+                                    width="50%"
+                                    directionMobile="row"
+                                    widthMobile="60%"
+                                >
+                                    <Text
+                                        fontSize="1rem"
+                                        mobileFontSize="0.8rem"
+                                        color="#fff"
+                                        textAlign="center"
+                                        fontWeight="bold"
+                                        cursor="pointer"
+                                    >
+                                        Products
+                                    </Text>{' '}
+                                </Flex>
+                            </Link>
+                            /
+                            <Flex
+                                width="50%"
+                                directionMobile="row"
+                                widthMobile="90%"
+                            >
+                                <Text
+                                    fontSize="1rem"
+                                    mobileFontSize="0.8rem"
+                                    color="rgb(255, 199, 44)"
+                                    textAlign="center"
+                                    fontWeight="bold"
+                                    cursor="pointer"
+                                >
+                                    Other Products
+                                </Text>{' '}
+                            </Flex>
+                        </Flex>
+                    </Flex>
                 </Flex>
-              </Link>
-              /
-              <Flex width="50%" directionMobile="row" widthMobile="90%">
-                <Text
-        fontSize="1rem"
-        mobileFontSize="0.8rem"
-        color="rgb(255, 199, 44)"
-        textAlign="center"
-        fontWeight="bold"
-        cursor="pointer"
+            </StyledDiv>
+            <Flex alignItems="center" background="#fff">
+                <Flex
+                    direction="column"
+                    alignItems="center"
+                    justifyContent="center"
+                    margin="2rem"
                 >
-                  Other Products
-                </Text>{" "}
-              </Flex>
-            </Flex>
-          </Flex>
-        </Flex>
-      </StyledDiv>
-      <Flex alignItems="center" background="#fff">
-        <Flex
-          direction="column"
-          alignItems="center"
-          justifyContent="center"
-          margin="2rem"
-        >
-          <Text
-            color="rgba(0, 48, 100, 1)"
-            fontSize="2.1rem"
-            mobileFontSize="2rem"
-            fontWeight="bold"
-            textAlign="left"
-            width="90%"
-            style={{ marginLeft: "1rem" }}
-          >
-            Other Products
-          </Text>
+                    <Text
+                        color="rgba(0, 48, 100, 1)"
+                        fontSize="2.1rem"
+                        mobileFontSize="2rem"
+                        fontWeight="bold"
+                        textAlign="left"
+                        width="90%"
+                        style={{ marginLeft: '1rem' }}
+                    >
+                        Other Products
+                    </Text>
 
-          <Collapse accordion expandIconPosition="end">
-            <Panel header={"Genuine Spare Parts"} key="1">
-              <p>{text}</p>
-            </Panel>
-          </Collapse>
-          <Collapse  expandIconPosition="end">
-            <Panel header={"Digital Controllers"} key="2">
-              <p>{text}</p>
-            </Panel>
-          </Collapse>
-          <Collapse expandIconPosition="end">
-            <Panel header={"Electrical Parts"} key="3">
-              <p>{text}</p>
-            </Panel>
-          </Collapse>
-        </Flex>
-      </Flex>
-    </>
-  );
+                    <Collapse accordion expandIconPosition="end">
+                        <Panel header={'Oil petroleum supplier'} key="1">
+                            <p>{text}</p>
+                        </Panel>
+                    </Collapse>
+                    <Collapse expandIconPosition="end">
+                        <Panel header={'Real-estate Construction'} key="2">
+                            <p>{text2}</p>
+                        </Panel>
+                    </Collapse>
+                    <Collapse expandIconPosition="end">
+                        <Panel header={'Food Complexes Factory'} key="3">
+                            <p>{text3}</p>
+                        </Panel>
+                    </Collapse>
+                </Flex>
+            </Flex>
+        </>
+    )
 }
