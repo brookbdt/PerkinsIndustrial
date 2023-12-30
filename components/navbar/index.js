@@ -190,14 +190,24 @@ const NavBar = () => {
                     Paint Factory
                 </ContentItem>
             </Links>
-            <Links href="/products/other">
+            <Links href="/products/import">
                 <ContentItem
                     onClick={() => {
                         setPopoverOpen(false)
                         onClose()
                     }}
                 >
-                    Other Products
+                    Import
+                </ContentItem>
+            </Links>
+            <Links href="/products/export">
+                <ContentItem
+                    onClick={() => {
+                        setPopoverOpen(false)
+                        onClose()
+                    }}
+                >
+                    Export
                 </ContentItem>
             </Links>
         </Content>
@@ -215,33 +225,14 @@ const NavBar = () => {
                             display: 'flex',
                             justifyContent: 'center',
                         }}
-                    >
-                        <Image
-                            src={logo}
-                            layout="fill"
-                            objectFit="contain"
-                            sizes="(min-width: 768px) 100vw,
-        (max-width: 1200px) 50vw,
-        33vw"
-                            alt="drawer image"
-                        />
-                    </div>
+                    ></div>
                 }
                 placement="top"
                 onClose={onClose}
                 open={open}
             >
                 <NavBarContainer direction="column">
-                    <Links href="/">
-                        <div>
-                            <Image
-                                src={logo}
-                                alt="Website logo image"
-                                width="180px"
-                                height="45px"
-                            />
-                        </div>
-                    </Links>
+                    <Links href="/"></Links>
                     <Links href="/">
                         <StyledButton onClick={onClose}>Home</StyledButton>
                     </Links>
