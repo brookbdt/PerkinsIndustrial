@@ -2,13 +2,8 @@
 import React, { useRef } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'react-router-dom'
 import styled from 'styled-components'
-import { AiOutlineHome } from 'react-icons/ai'
 import { Flex, Text } from '../../../components/Base/'
-import antDCarousel from 'antd/lib/carousel'
-import antDCollapse from 'antd/lib/collapse'
-
 // Import product images
 import sesameImage from '../../../assets/sesame.png'
 import kidneyBeanImage from '../../../assets/kidneyBean.png'
