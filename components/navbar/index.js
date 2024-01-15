@@ -9,9 +9,8 @@ import { AiOutlineMail } from 'react-icons/ai'
 import { BsTelephoneFill } from 'react-icons/bs'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { Flex, Text, Button } from '../Base'
-import { GoSearch } from 'react-icons/go'
+
 import Drawer from 'antd/lib/drawer'
-import Search from 'antd/lib/input/Search'
 
 const Layout = styled('div')`
     background: transparent !important;
