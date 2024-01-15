@@ -7,6 +7,8 @@ import { BsTelephoneFill } from 'react-icons/bs'
 import { GoGlobe } from 'react-icons/go'
 import styled from 'styled-components'
 import Link from 'next/link'
+import { FaFacebookF, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'
+
 const FooterContainer = styled.div`
     @media (max-width: 1000px) {
         position: relative;
@@ -100,10 +102,10 @@ export default function Footer() {
                                     <GoGlobe
                                         fontSize="1.5rem"
                                         color="rgb(255, 199, 44)"
-                                        style={{ marginRight: '0.7rem' }}
+                                        style={{ marginRight: '0.1rem' }}
                                     />
                                     <Text color="#fff" fontSize="1rem">
-                                        https://PerkinsIndustrial.com
+                                        https://www.PerkinsIndustrial.com
                                     </Text>
                                 </Flex>
                             </Flex>
@@ -148,7 +150,7 @@ export default function Footer() {
                                             color="rgb(255, 199, 44)"
                                             style={{ marginRight: '0.7rem' }}
                                         />
-                                        Switchgears
+                                        Paint Factory
                                     </Text>
                                     <Text
                                         color="#fff"
@@ -206,7 +208,42 @@ export default function Footer() {
                             >
                                 Call us now
                             </Text>
-                            <Flex justifyContent="start" width="40%">
+
+                            <a
+                                href="https://www.facebook.com/YourPage"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaFacebookF
+                                    color="#fff"
+                                    fontSize="1.5rem"
+                                    style={{ marginRight: '1rem' }}
+                                />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/YourProfile"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaLinkedinIn
+                                    color="#fff"
+                                    fontSize="1.5rem"
+                                    style={{ marginRight: '1rem' }}
+                                />
+                            </a>
+                            <a
+                                href="https://wa.me/YourNumber"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaWhatsapp
+                                    color="#fff"
+                                    fontSize="1.5rem"
+                                    style={{ marginRight: '1rem' }}
+                                />
+                            </a>
+
+                            {/* <Flex justifyContent="start" width="40%">
                                 <Button
                                     background="transparent"
                                     color="rgb(255, 199, 44)"
@@ -221,7 +258,29 @@ export default function Footer() {
                                     {' '}
                                     Visit Us
                                 </Button>
-                            </Flex>
+                            </Flex> */}
+                        </Flex>
+                    </Flex>
+                    <Flex justifyContent="space-between" width="100%">
+                        <Flex direction="column">
+                            <Link href="/terms">
+                                <Text
+                                    color="#fff"
+                                    hoverColor="rgb(255, 199, 44)"
+                                    fontSize="0.8rem"
+                                >
+                                    Terms of Service
+                                </Text>
+                            </Link>
+                            <Link href="/privacy">
+                                <Text
+                                    color="#fff"
+                                    hoverColor="rgb(255, 199, 44)"
+                                    fontSize="0.8rem"
+                                >
+                                    Privacy Policy
+                                </Text>
+                            </Link>
                         </Flex>
                     </Flex>
                     <Flex justifyContent="space-between" width="100%">
@@ -246,7 +305,7 @@ export default function Footer() {
                         >
                             <Link href="/">
                                 <Text
-                                    width="12%"
+                                    width="10%"
                                     mobileWidth="13%"
                                     hoverColor="rgb(255, 199, 44)"
                                     color="#fff"
@@ -269,9 +328,9 @@ export default function Footer() {
                                     About Us |
                                 </Text>
                             </Link>
-                            <Link href="/products">
+                            <Link href="/products/generators">
                                 <Text
-                                    width="12%"
+                                    width="22%"
                                     mobileWidth="18%"
                                     hoverColor="rgb(255, 199, 44)"
                                     color="#fff"
@@ -279,10 +338,10 @@ export default function Footer() {
                                     mobileFontSize="0.5rem"
                                 >
                                     {' '}
-                                    Products |
+                                    Products & Services |
                                 </Text>
                             </Link>
-                            <Link href="/service">
+                            {/* <Link href="/service">
                                 <Text
                                     width="12%"
                                     mobileWidth="18%"
@@ -294,10 +353,10 @@ export default function Footer() {
                                     {' '}
                                     Services |
                                 </Text>
-                            </Link>
+                            </Link> */}
                             <Link href="/gallery">
                                 <Text
-                                    width="12%"
+                                    width="10%"
                                     mobileWidth="16%"
                                     hoverColor="rgb(255, 199, 44)"
                                     color="#fff"

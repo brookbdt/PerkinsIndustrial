@@ -4,7 +4,7 @@ import antDPopover from 'antd/lib/popover'
 import styled from 'styled-components'
 import Image from 'next/image'
 import Links from 'next/link'
-import logo from '../../assets/Perkins.png'
+import logo from '../../assets/PerkinsLogo.png'
 import { AiOutlineMail } from 'react-icons/ai'
 import { BsTelephoneFill } from 'react-icons/bs'
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -40,22 +40,21 @@ const Popover = styled(antDPopover)`
 
 const HeaderItems = styled.div`
     display: flex;
-    align-item: center;
-    justify-content: end;
+    align-items: center;
+    justify-content: space-between; // Changed to space-between for even spacing
     width: 42rem;
     height: 2rem;
-    gap: 10px;
     @media (max-width: 1000px) {
         display: none;
     }
 `
 
 const StyledButton = styled('button')`
-    width: ${(props) => props.width || '7rem'} !important;
+    width: ${(props) => props.width || '10rem'} !important;
     height: ${(props) => props.height || '2.5rem'} !important;
     background: ${(props) => props.background || 'transparent'} !important;
     border: 0px solid transparent !important;
-    color: #000000 !important;
+    color: #ffffff !important;
     font-size: 14px !important;
     cursor: pointer !important;
     padding: ${(props) => props.padding || ''} !important;
@@ -66,20 +65,11 @@ const StyledButton = styled('button')`
     }
     font-weight: 500 !important;
     font-size: 1rem !important;
-    color: white !important;
+    /* color: rgb(0, 44, 91) !important; */
 `
-// const LinkContainer = styled("div")`
-//   width: 100%;
-//   height: 50%;
-//   display: flex;
-//   align-item: center;
-//   justify-content: end;
-//   @media (max-width: 1000px) {
-//     display: none;
-//   }
-// `;
+
 const Credentials = styled('div')`
-    background: white !important;
+    background: rgb(0, 44, 91) !important;
     min-height: 4rem;
     min-width: 100vw;
     display: flex;
@@ -115,14 +105,6 @@ const NavBarContainer = styled('div')`
         padding: 0 1rem 0rem 1rem;
     }
 `
-
-const SearchContainer = styled('div')`
-    display: none;
-    @media (max-width: 1000px) {
-        display: inline;
-    }
-`
-
 const Content = styled('span')`
     display: flex;
     flex-direction: column;
@@ -147,13 +129,21 @@ const ContentItem = styled('div')`
         border-left: 10px solid rgb(255, 199, 44);
     }
 `
-const searchContent = (
-    <Search
-        style={{ width: '200px' }}
-        placeholder="input search text"
-        enterButton
-    />
-)
+
+// const SearchContainer = styled('div')`
+//     display: none;
+//     @media (max-width: 1000px) {
+//         display: inline;
+//     }
+// `
+
+// const searchContent = (
+//     <Search
+//         style={{ width: '200px' }}
+//         placeholder="input search text"
+//         enterButton
+//     />
+// )
 
 //create a hamburger menu for mobile view
 
@@ -177,10 +167,10 @@ const NavBar = () => {
                         onClose()
                     }}
                 >
-                    Generator Engines
+                    Generators
                 </ContentItem>
             </Links>
-            <Links href="/products/paintfactory">
+            <Links href="/products/generators">
                 <ContentItem
                     onClick={() => {
                         setPopoverOpen(false)
@@ -188,6 +178,16 @@ const NavBar = () => {
                     }}
                 >
                     Paint Factory
+                </ContentItem>
+            </Links>
+            <Links href="/products/export">
+                <ContentItem
+                    onClick={() => {
+                        setPopoverOpen(false)
+                        onClose()
+                    }}
+                >
+                    Export
                 </ContentItem>
             </Links>
             <Links href="/products/import">
@@ -200,14 +200,14 @@ const NavBar = () => {
                     Import
                 </ContentItem>
             </Links>
-            <Links href="/products/export">
+            <Links href="/service">
                 <ContentItem
                     onClick={() => {
                         setPopoverOpen(false)
                         onClose()
                     }}
                 >
-                    Export
+                    Service
                 </ContentItem>
             </Links>
         </Content>
@@ -225,18 +225,35 @@ const NavBar = () => {
                             display: 'flex',
                             justifyContent: 'center',
                         }}
-                    ></div>
+                    >
+                        <Image
+                            src={logo}
+                            layout="fill"
+                            objectFit="contain"
+                            sizes="(min-width: 768px) 100vw,
+        (max-width: 1200px) 50vw,
+        33vw"
+                            alt="drawer image"
+                        />
+                    </div>
                 }
                 placement="top"
                 onClose={onClose}
                 open={open}
             >
                 <NavBarContainer direction="column">
-                    <Links href="/"></Links>
-                    <Links href="/">
+                    <Links href="/" passHref>
+                        <Image
+                            src={logo}
+                            alt="Website logo image"
+                            width="180px"
+                            height="45px"
+                        />
+                    </Links>
+                    <Links href="/" passHref>
                         <StyledButton onClick={onClose}>Home</StyledButton>
                     </Links>
-                    <Links href="/about">
+                    <Links href="/about" passHref>
                         <StyledButton onClick={onClose}>About Us</StyledButton>
                     </Links>
                     <Popover
@@ -255,13 +272,13 @@ const NavBar = () => {
                             Products
                         </StyledButton>
                     </Popover>
-                    <Links href="/service">
+                    <Links href="/service" passHref>
                         <StyledButton onClick={onClose}>Service</StyledButton>
                     </Links>
-                    <Links href="/gallery">
+                    {/* <Links href="/gallery">
                         <StyledButton onClick={onClose}>Gallery</StyledButton>
-                    </Links>
-                    <Links href="/contact">
+                    </Links> */}
+                    <Links href="/contact" passHref>
                         <StyledButton onClick={onClose}>
                             Contact Us
                         </StyledButton>
@@ -272,36 +289,39 @@ const NavBar = () => {
                 <Flex gap="20px" width="80vw" justifyContent="end">
                     <Text
                         fontSize="0.7rem"
-                        color="black"
+                        color="#fff"
                         width="50vw"
                         textAlign="right"
                     >
                         Your Trusted Power Solutions Provider in Ethiopia
                     </Text>
                     <Flex width="50%" justifyContent="center">
-                        <Flex width="880px" gap="1rem">
+                        <Flex width="280px" gap="1rem">
+                            {' '}
+                            {/* Increased width for email */}
                             <AiOutlineMail
                                 style={{
                                     fontSize: '1rem',
-                                    color: 'black',
-                                    marginRight: '-10px',
-                                }}
-                            />{' '}
-                            <Text fontSize="0.7rem" color="black" width="40%">
-                                info@perkinsindustrial.com
-                            </Text>
-                        </Flex>
-                        <Flex width="250px" gap="1rem">
-                            <BsTelephoneFill
-                                style={{
-                                    fontSize: '1rem',
-                                    color: 'black',
+                                    color: 'rgb(255, 199, 44)',
                                     marginRight: '-10px',
                                 }}
                             />
-                            <Text fontSize="0.7rem" color="black" width="50%">
-                                {' '}
-                                +251 114 700 101
+                            <Text fontSize="0.7rem" color="#fff">
+                                info@nilecoeem.com
+                            </Text>
+                        </Flex>
+                        <Flex width="220px" gap="1rem">
+                            {' '}
+                            {/* Adjusted width for phone number */}
+                            <BsTelephoneFill
+                                style={{
+                                    fontSize: '1rem',
+                                    color: 'rgb(255, 199, 44)',
+                                    marginRight: '-10px',
+                                }}
+                            />
+                            <Text fontSize="0.7rem" color="#fff">
+                                +251 977 80 5757
                             </Text>
                         </Flex>
                     </Flex>
@@ -312,13 +332,12 @@ const NavBar = () => {
                     <HamburgerMenu onClick={showDrawer}>
                         <GiHamburgerMenu style={{ fontSize: '2rem' }} />
                     </HamburgerMenu>
-                    <Links href="/">
+                    <Links href="/" passHref>
                         <div
                             style={{
                                 width: '210px',
                                 height: '55px',
                                 position: 'relative',
-                                color: 'white',
                             }}
                         >
                             <Image
@@ -332,14 +351,24 @@ const NavBar = () => {
                             />
                         </div>
                     </Links>
-
+                    {/* <SearchContainer>
+                        <Popover
+                            content={searchContent}
+                            trigger="click"
+                            placement="bottom"
+                        >
+                            <Flex width="30px" height="30px" margin="0px 15px">
+                                <GoSearch color="rgba(0, 48, 100, 1)" />
+                            </Flex>
+                        </Popover>
+                    </SearchContainer> */}
                     <HeaderItems>
-                        <Links href="/">
+                        <Links href="/" passHref>
                             <StyledButton width="7rem" height="2.5rem">
                                 Home
                             </StyledButton>
                         </Links>
-                        <Links href="/about">
+                        <Links href="/about" passHref>
                             <StyledButton width="7rem" height="2.5rem">
                                 About Us
                             </StyledButton>
@@ -349,23 +378,37 @@ const NavBar = () => {
                             placement="bottomRight"
                             trigger="hover"
                         >
-                            <StyledButton>Products</StyledButton>
+                            <StyledButton>Products & Services</StyledButton>
                         </Popover>
-                        <Links href="/service">
+                        {/* <Links href="/service" passHref>
                             <StyledButton width="7rem" height="2.5rem">
                                 Service
                             </StyledButton>
-                        </Links>
-                        <Links href="/gallery">
+                        </Links> */}
+                        {/* <Links href="/gallery">
                             <StyledButton width="7rem" height="2.5rem">
                                 Gallery
                             </StyledButton>
-                        </Links>
-                        <Links href="/contact">
+                        </Links> */}
+                        <Links href="/contact" passHref>
                             <StyledButton width="7rem" height="2.5rem">
                                 Contact Us
                             </StyledButton>
                         </Links>
+                        {/* <Popover
+                            content={searchContent}
+                            trigger="click"
+                            placement="bottom"
+                        >
+                            {' '}
+                            <GoSearch
+                                color="rgba(0, 48, 100, 1)"
+                                style={{
+                                    marginRight: '1rem',
+                                    marginTop: '1rem',
+                                }}
+                            />
+                        </Popover> */}
                     </HeaderItems>
                 </NavBarContainer>
             </Layout>

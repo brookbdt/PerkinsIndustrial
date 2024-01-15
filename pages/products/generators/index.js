@@ -24,6 +24,7 @@ import generator6 from '../../../assets/generators/generator6.jpg'
 import generator4 from '../../../assets/generators/generator4.jpg'
 import generator5 from '../../../assets/generators/generator5.jpg'
 import generator36 from '../../../assets/generators/generator36.jpg'
+
 const Carousel = styled(antDCarousel)`
     width: 50rem !important;
     height: 40rem !important;
@@ -101,6 +102,7 @@ const StyledDiv = styled.div`
     color: #fff;
     text-align: center;
 `
+
 export default function index() {
     const carouselRef = useRef(null)
     return (

@@ -243,6 +243,12 @@ const FooterHeader = styled.div`
         display: none;
     }
 `
+
+const ScrollableContent = styled.div`
+    max-height: 200px; // Set a fixed height as per your requirement
+    overflow-y: auto; // Enable vertical scrolling
+    padding-right: 5px; // Optional, for better readability
+`
 const About = () => {
     const workers = [
         generator1,
@@ -486,35 +492,41 @@ const About = () => {
                                         }
                                         key="2"
                                     >
-                                        <p>
-                                            Our Genset is consisting of imported
-                                            Perkins diesel engines manufactured
-                                            from the UK/USA from 400 series all
-                                            the way to 4000 series and coupling
-                                            the engines with alternators from
-                                            various suppliers such as Leroysomer
-                                            France and Linz Italy. The
-                                            alternators come with quality AVR
-                                            such as the R120 to R250 or SX440
-                                            and the voltage level can be
-                                            adjusted by terminal arrangement as
-                                            per client requirement. The control
-                                            panel consists of a digital
-                                            controller from Deep Sea Electronics
-                                            UK coming with features such AMF,
-                                            configurable timers and alarms,
-                                            compatible with a wide range of CAN
-                                            engines, uses DSE Configuration
-                                            Suite PC software. We have a capable
-                                            team for Generator repair and
-                                            Troubleshooting in Ethiopia, as per
-                                            our contract we will have our
-                                            Electromechanical technicians on
-                                            standby for any service requirement
-                                            across the country, and
-                                            troubleshooting of engines to keep
-                                            your engine feeling great.{' '}
-                                        </p>
+                                        <ScrollableContent>
+                                            <p>
+                                                Our Genset is consisting of
+                                                imported Perkins diesel engines
+                                                manufactured from the UK/USA
+                                                from 400 series all the way to
+                                                4000 series and coupling the
+                                                engines with alternators from
+                                                various suppliers such as
+                                                Leroysomer France and Linz
+                                                Italy. The alternators come with
+                                                quality AVR such as the R120 to
+                                                R250 or SX440 and the voltage
+                                                level can be adjusted by
+                                                terminal arrangement as per
+                                                client requirement. The control
+                                                panel consists of a digital
+                                                controller from Deep Sea
+                                                Electronics UK coming with
+                                                features such AMF, configurable
+                                                timers and alarms, compatible
+                                                with a wide range of CAN
+                                                engines, uses DSE Configuration
+                                                Suite PC software. We have a
+                                                capable team for Generator
+                                                repair and Troubleshooting in
+                                                Ethiopia, as per our contract we
+                                                will have our Electromechanical
+                                                technicians on standby for any
+                                                service requirement across the
+                                                country, and troubleshooting of
+                                                engines to keep your engine
+                                                feeling great.{' '}
+                                            </p>
+                                        </ScrollableContent>
                                     </Panel>
                                 </Collapse>
                                 <Collapse expandIconPosition="right">

@@ -17,12 +17,20 @@ import { RiUserSettingsLine } from 'react-icons/ri'
 import AboutUs from '../assets/generators/generator3.jpg'
 import generatorSingle from '../assets/generatorSingle.jpg'
 import switchGear from '../assets/switchgear.jpg'
+import slider1 from '../assets/slider1.jpg'
+import slider2 from '../assets/slider2.jpg'
+import slider3 from '../assets/slider3.jpg'
+import slider4 from '../assets/slider4.jpg'
 import hero from '../assets/hero.webp'
+import hero2 from '../assets/About-Us-Lowerf.jpg'
 import otherProducts from '../assets/otherProducts.jpg'
 import { CgArrowLongRight } from 'react-icons/cg'
 import { Flex, Text, Button } from '../components/Base/'
 import HomeSlider from '../components/HomeSlider'
 import Link from 'next/link'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 const ImageContainer = styled.div`
     display: flex;
@@ -271,6 +279,25 @@ const OrDiv = styled.div`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 
+const HeroOverlay = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black
+    z-index: 1; // Ensure it's above the image but below the text
+`
+
+// Slider settings
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+}
 export default function Home() {
     // const [count1, setCount1] = useState(0);
     // const [count2, setCount2] = useState(0);
@@ -331,25 +358,89 @@ export default function Home() {
             </Head>
 
             <HeaderContainer>
-                <ImageContainer
-                    width="100%"
-                    height="700px"
-                    mobileWidth="100vw"
-                    mobileHeight="230px"
-                >
-                    <Image
-                        layout="fill"
-                        background="black"
-                        objectFit="cover"
-                        src={hero}
-                        alt="hero image.jpg"
-                        priority
-                        placeholder="blur"
-                        sizes="(min-width: 760px) 100vw,
+                <Slider {...settings}>
+                    <ImageContainer
+                        width="100%"
+                        height="700px"
+                        mobileWidth="100vw"
+                        mobileHeight="230px"
+                    >
+                        <HeroOverlay />
+                        <Image
+                            layout="fill"
+                            background="black"
+                            objectFit="cover"
+                            src={slider1}
+                            alt="hero image.jpg"
+                            priority
+                            placeholder="blur"
+                            sizes="(min-width: 760px) 100vw,
             (max-width: 1200px) 50vw,
             33vw"
-                    />{' '}
-                </ImageContainer>
+                        />{' '}
+                    </ImageContainer>
+                    <ImageContainer
+                        width="100%"
+                        height="700px"
+                        mobileWidth="100vw"
+                        mobileHeight="230px"
+                    >
+                        <HeroOverlay />
+                        <Image
+                            layout="fill"
+                            background="black"
+                            objectFit="cover"
+                            src={slider2}
+                            alt="hero image.jpg"
+                            priority
+                            placeholder="blur"
+                            sizes="(min-width: 760px) 100vw,
+            (max-width: 1200px) 50vw,
+            33vw"
+                        />{' '}
+                    </ImageContainer>
+                    <ImageContainer
+                        width="100%"
+                        height="700px"
+                        mobileWidth="100vw"
+                        mobileHeight="230px"
+                    >
+                        <HeroOverlay />
+                        <Image
+                            layout="fill"
+                            background="black"
+                            objectFit="cover"
+                            src={slider3}
+                            alt="hero image.jpg"
+                            priority
+                            placeholder="blur"
+                            sizes="(min-width: 760px) 100vw,
+            (max-width: 1200px) 50vw,
+            33vw"
+                        />{' '}
+                    </ImageContainer>
+                    <ImageContainer
+                        width="100%"
+                        height="700px"
+                        mobileWidth="100vw"
+                        mobileHeight="230px"
+                    >
+                        <HeroOverlay />
+                        <Image
+                            layout="fill"
+                            background="black"
+                            objectFit="cover"
+                            src={slider4}
+                            alt="hero image.jpg"
+                            priority
+                            placeholder="blur"
+                            sizes="(min-width: 760px) 100vw,
+            (max-width: 1200px) 50vw,
+            33vw"
+                        />{' '}
+                    </ImageContainer>
+                </Slider>
+
                 <HeaderContent>
                     <Text
                         mobileDisplay="none"
@@ -362,7 +453,7 @@ export default function Home() {
                     </Text>
                     <Text
                         fontSize={'3.3rem'}
-                        color="rgb(0,44,90)"
+                        color="white"
                         fontWeight="bold"
                         width="60vw"
                         height="10rem"
@@ -377,7 +468,7 @@ export default function Home() {
                         mobileDisplay="none"
                         mobileFontSize={'0.7rem'}
                         fontSize={'20px'}
-                        color="rgb(0,44,90)"
+                        color="white"
                         fontWeight="bold"
                         style={{ marginLeft: '1rem', marginTop: '1.5rem' }}
                         width="60vw"
@@ -388,7 +479,7 @@ export default function Home() {
                         We offer the most reliable power services in the country
                     </Text>
                     <HeaderButtonContainer>
-                        <Link href="/about">
+                        <Link href="/contact">
                             <Button
                                 background="rgb(253,201,55)"
                                 color="white"
@@ -400,10 +491,10 @@ export default function Home() {
                                 mobileFontSize="0.7rem"
                             >
                                 {' '}
-                                About Us
+                                Contact Us
                             </Button>
                         </Link>
-                        <Link href="/contact">
+                        {/* <Link href="/contact">
                             <Button
                                 background="transparent"
                                 color="rgb(1,44,90)"
@@ -417,7 +508,7 @@ export default function Home() {
                                 {' '}
                                 Contact Us
                             </Button>
-                        </Link>
+                        </Link> */}
                     </HeaderButtonContainer>
                 </HeaderContent>
             </HeaderContainer>
@@ -452,13 +543,13 @@ export default function Home() {
                     />
                 </ImageContainer>
                 <Description>
-                    <Text
+                    {/* <Text
                         fontSize="1.1rem"
                         color="rgb(136,142,148)"
                         mobileTextAlign="center"
                     >
                         About Us
-                    </Text>
+                    </Text> */}
                     <Text
                         mobileTextAlign="center"
                         fontWeight="bold"
@@ -779,7 +870,7 @@ export default function Home() {
                     textAlign="center"
                     mobileTextAlign="center"
                 >
-                    Modern Electrical And Power Equipment Guaranteed
+                    Product & Services
                 </Text>
                 <Flex
                     direction="row"
@@ -903,11 +994,11 @@ export default function Home() {
                             marginTop="30px"
                             marginLeft="10px"
                         >
-                            Switchgears are effective solutions for a client
-                            seeking power at cyclic conditions or generally to
-                            get efficient higher rating power.
+                            This encompasses interior and exterior paints,
+                            primers, specialty coatings, and finishes tailored
+                            for various surfaces and applications.
                         </Text>
-                        <Link href={'/products/switchgears'}>
+                        <Link href={'/products/paintfactory'}>
                             <CardButton>
                                 <Text
                                     style={{
@@ -1047,14 +1138,14 @@ export default function Home() {
                                     justifyContentMobile="start"
                                     alignItemsMobile=""
                                 >
-                                    <Text
+                                    {/* <Text
                                         fontSize="1.5rem"
                                         width="100%"
                                         color="#fff"
                                         mobileTextAlign="center"
                                     >
                                         ABOUT US
-                                    </Text>
+                                    </Text> */}
                                     <Text
                                         fontSize="2rem"
                                         mobileFontSize="1.5rem"
