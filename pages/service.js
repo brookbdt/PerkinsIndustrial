@@ -150,7 +150,7 @@ export default function services() {
             fontSize="2.3rem"
             mobileFontSize="2rem"
             fontWeight="bold"
-            textAlign="left"
+            textAlign= "justify"
             width="55%"
           >
             Services

@@ -20,7 +20,7 @@ import switchGear from '../assets/switchgear.jpg'
 import slider1 from '../assets/slider1.jpg'
 import slider2 from '../assets/slider2.jpg'
 import slider3 from '../assets/slider3.JPG'
-import slider4 from '../assets/slider4.JPG'
+// import slider4 from '../assets/slider4.JPG'
 import hero from '../assets/hero.webp'
 import hero2 from '../assets/About-Us-Lowerf.jpg'
 import otherProducts from '../assets/otherProducts.jpg'
@@ -373,7 +373,7 @@ export default function Home() {
                             src={slider1}
                             alt="hero image.jpg"
                             priority
-                            placeholder="blur"
+                            // placeholder="blur"
                             sizes="(min-width: 760px) 100vw,
             (max-width: 1200px) 50vw,
             33vw"
@@ -393,7 +393,7 @@ export default function Home() {
                             src={slider2}
                             alt="hero image.jpg"
                             priority
-                            placeholder="blur"
+                            // placeholder="blur"
                             sizes="(min-width: 760px) 100vw,
             (max-width: 1200px) 50vw,
             33vw"
@@ -413,7 +413,7 @@ export default function Home() {
                             src={slider3}
                             alt="hero image.jpg"
                             priority
-                            placeholder="blur"
+                            // placeholder="blur"
                             sizes="(min-width: 760px) 100vw,
             (max-width: 1200px) 50vw,
             33vw"
@@ -430,10 +430,10 @@ export default function Home() {
                             layout="fill"
                             background="black"
                             objectFit="cover"
-                            src={slider4}
+                            // src={slider4}
                             alt="hero image.jpg"
                             priority
-                            placeholder="blur"
+                            // placeholder="blur"
                             sizes="(min-width: 760px) 100vw,
             (max-width: 1200px) 50vw,
             33vw"
@@ -915,7 +915,8 @@ export default function Home() {
                             fontSize="0.9rem"
                             mobileFontSize="0.9rem"
                             mobileTextAlign="center"
-                            textAlign="left"
+                            // textAlign="left"
+                            textAlign= "justify"
                             color="#858585"
                             width="90%"
                             margin="30px 10px"
@@ -988,7 +989,7 @@ export default function Home() {
                             fontSize="0.9rem"
                             mobileFontSize="0.9rem"
                             mobileTextAlign="center"
-                            textAlign="left"
+                            textAlign= "justify"
                             color="#858585"
                             width="90%"
                             marginTop="30px"
@@ -1062,7 +1063,7 @@ export default function Home() {
                             fontSize="0.9rem"
                             mobileFontSize="0.9rem"
                             mobileTextAlign="center"
-                            textAlign="left"
+                            textAlign= "justify"
                             color="#858585"
                             width="90%"
                             marginTop="30px"

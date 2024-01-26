@@ -226,7 +226,7 @@ export default function index() {
                         fontSize="2.1rem"
                         mobileFontSize="2rem"
                         fontWeight="bold"
-                        textAlign="left"
+                        textAlign= "justify"
                         width="90%"
                         style={{ marginLeft: '1rem' }}
                     >

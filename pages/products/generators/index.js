@@ -235,7 +235,7 @@ export default function index() {
                         style={{ padding: '1rem' }}
                         color="rgb(136,142,148)"
                         fontSize="0.9rem"
-                        textAlign="left"
+                        textAlign= "justify"
                         width="90%"
                     >
                         Perkins Industrial Manufacturing PLC packages Cummins
@@ -268,7 +268,7 @@ export default function index() {
                                 color="rgb(136,142,148)"
                                 fontSize="0.9rem"
                                 mobileFontSize="0.8rem"
-                                textAlign="left"
+                                textAlign= "justify"
                                 width="90%"
                             >
                                 JET Generators are powered by Perkins engines

@@ -127,7 +127,7 @@ const CommitmentInsideSection = styled.section`
     background-color: #fff;
     background-size: cover;
     position: relative;
-    background-image: url(${commitmentImage.src});
+    background-image: url(${LowerImage.src});
     @media (max-width: 1000px) {
         width: 100%;
     }
@@ -379,7 +379,7 @@ const About = () => {
                                 fontSize="2rem"
                                 mobileFontSize="2rem"
                                 fontWeight="bold"
-                                textAlign="left"
+                                textAlign= "justify"
                             >
                                 {' '}
                                 Powering Your Business
@@ -387,7 +387,8 @@ const About = () => {
                             <Text
                                 color="rgb(136,142,148)"
                                 fontSize="1rem"
-                                textAlign="left"
+                                // textAlign="left"
+                                textAlign= "justify"
                             >
                                 {' '}
                                 Perkins, for over 80 years, has worked with
@@ -417,7 +418,8 @@ const About = () => {
                             <Text
                                 color="rgb(136,142,148)"
                                 fontSize="1rem"
-                                textAlign="left"
+                                // textAlign="left"
+                                textAlign= "justify"
                             >
                                 To develop lasting client relationship by
                                 providing exceptional service and products. Our
@@ -429,14 +431,16 @@ const About = () => {
                                 fontSize="1.3rem"
                                 mobileFontSize="1.8rem"
                                 fontWeight="bold"
-                                textAlign="left"
+                                // textAlign="left"
+                                textAlign= "justify"
                             >
                                 What Is Our Vision?
                             </Text>
                             <Text
                                 color="rgb(136,142,148)"
                                 fontSize="1rem"
-                                textAlign="left"
+                                // textAlign="left"
+                                textAlign= "justify"
                             >
                                 To be the benchmark for Diesel engine Generator,
                                 production, assembly and maintenance world wide.
@@ -559,7 +563,8 @@ const About = () => {
                                 <Text
                                     color="rgb(136,142,148)"
                                     fontSize="1rem"
-                                    textAlign="left"
+                                    // textAlign="left"
+                                    textAlign= "justify"
                                 >
                                     We have a long and proud history of
                                     providing energy solutions to various

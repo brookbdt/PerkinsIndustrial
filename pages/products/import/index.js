@@ -249,7 +249,7 @@ const ImportPage = () => {
                         fontSize="2.1rem"
                         mobileFontSize="2rem"
                         fontWeight="bold"
-                        textAlign="left"
+                        textAlign= "justify"
                         width="90%"
                         style={{ marginLeft: '1rem' }}
                     >
@@ -260,7 +260,7 @@ const ImportPage = () => {
                         style={{ padding: '1rem' }}
                         color="rgb(136,142,148)"
                         fontSize="0.9rem"
-                        textAlign="left"
+                        textAlign= "justify"
                         width="90%"
                     >
                         We provide a wide range of high-quality generators
@@ -280,7 +280,7 @@ const ImportPage = () => {
                                 style={{ padding: '1rem' }}
                                 color="rgb(136,142,148)"
                                 fontSize="0.9rem"
-                                textAlign="left"
+                                ttextAlign= "justify"
                                 width="90%"
                             >
                                 Our generators are sourced from top

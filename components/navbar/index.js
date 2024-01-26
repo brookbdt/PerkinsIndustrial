@@ -169,7 +169,7 @@ const NavBar = () => {
                     Generators
                 </ContentItem>
             </Links>
-            <Links href="/products/generators">
+            <Links href="/products/paintfactory">
                 <ContentItem
                     onClick={() => {
                         setPopoverOpen(false)
@@ -306,7 +306,7 @@ const NavBar = () => {
                                 }}
                             />
                             <Text fontSize="0.7rem" color="#fff">
-                                info@nilecoeem.com
+                                info@perkinsindustrial.com
                             </Text>
                         </Flex>
                         <Flex width="220px" gap="1rem">
