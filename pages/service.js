@@ -150,7 +150,7 @@ export default function services() {
             fontSize="2.3rem"
             mobileFontSize="2rem"
             fontWeight="bold"
-            textAlign= "justify"
+            textAlign="justify"
             width="55%"
           >
             Services
@@ -158,12 +158,22 @@ export default function services() {
 
           <Collapse accordion expandIconPosition="end">
             <Panel header={"After Sales"} key="1">
-              <p></p>
+              <Text color="#333" fontSize="1rem">
+                - Regular servicing ensures engine longevity. Missing intervals
+                can cause a 20% performance drop, risking critical failures and
+                costly downtime.
+              </Text>
+              <Text color="#333" fontSize="1rem">- More Than 10 Years We Provide Services All over the World</Text>
             </Panel>
           </Collapse>
           <Collapse expandIconPosition="right">
             <Panel header={"Warranty support"} key="2">
-              <p>1 Year</p>
+              <Text color="#333" fontSize="1rem">
+                Enjoy peace of mind with our 1-year warranty support. We stand
+                behind the quality of our products and are here to assist you
+                with any issues that may arise during the first year of your
+                purchase.
+              </Text>
             </Panel>
           </Collapse>
         </Flex>

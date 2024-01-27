@@ -250,6 +250,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emailjs/browser@npm:^3.12.1":
+  version: 3.12.1
+  resolution: "@emailjs/browser@npm:3.12.1"
+  checksum: 6e78715e5e0a43ee7fdbfcef9fd2b722a69a977e545b25c0ed94a61e3d01c99f72f1de4394970337365975d599d459af9be040e489091675a6d474e69996f746
+  languageName: node
+  linkType: hard
+
 "@emotion/is-prop-valid@npm:^0.8.2":
   version: 0.8.8
   resolution: "@emotion/is-prop-valid@npm:0.8.8"
@@ -691,6 +698,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "PerkinsIndustrial@workspace:."
   dependencies:
+    "@emailjs/browser": "npm:^3.12.1"
     "@next/bundle-analyzer": "npm:^12.3.1"
     antd: "npm:^4.23.2"
     babel-plugin-styled-components: "npm:^2.0.7"
