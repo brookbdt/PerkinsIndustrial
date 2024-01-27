@@ -1,5 +1,4 @@
-import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React from "react";
 import Footer from "../components/Footer";
 import "antd/dist/antd.css";
 import Head from "next/head";
@@ -252,45 +251,7 @@ const ScrollableContent = styled.div`
   padding-right: 5px; // Optional, for better readability
 `;
 const About = () => {
-  const form = useRef();
-
-  const [formData, setFormData] = useState({
-    userName: "",
-    userEmail: "",
-    phoneNumbers: "",
-    generators: "",
-    message: "",
-  });
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    // Send the email using emailjs
-    emailjs
-      .sendForm(
-        "service_5m28qhp",
-        "template_5lgaabt",
-        form.current,
-        "8PzrorLhfVbkdoJpL"
-      )
-      .then((result) => {
-        console.log(result.text);
-        console.log("message");
-        alert("Form submitted!");
-
-        // Clear the form fields
-        setFormData({
-          userName: "",
-          userEmail: "",
-          phoneNumbers: "",
-          generators: "",
-          message: "",
-        });
-      })
-      .catch((error) => {
-        console.log(error.text);
-      });
-  };
+  
 
   const workers = [
     generator1,
